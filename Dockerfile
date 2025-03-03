@@ -1,5 +1,5 @@
 # Use the official OpenJDK 17 image as the base image
-FROM openjdk:17-jdk-alphine
+FROM openjdk:17-jdk-alpine
 
 RUN apk add --no-cache tzdata
 ENV TZ=Europe/Istanbul

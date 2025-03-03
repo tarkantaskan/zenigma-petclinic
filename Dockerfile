@@ -1,10 +1,10 @@
 FROM openjdk:17-jdk
 WORKDIR /app
-COPY target/myapp.jar app.jar
+COPY target/*.jar app.jar
 
-RUN apk add --no-cache tzdata
+RUN apt-get update && apt-get install -y tzdata
 ENV TZ=Europe/Istanbul
 
-ENV SPRING_APPLICATION_JSON='{"spring.profiles.active":"postgres"}'
+ENV SPRING_PROFILES_ACTIVE=postgres
 
 ENTRYPOINT ["java", "-jar", "app.jar"]

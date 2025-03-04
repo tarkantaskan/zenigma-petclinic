@@ -11,7 +11,7 @@ WORKDIR /app
 COPY target/*.jar app.jar
 
 # Set environment variables for PostgreSQL configuration
-ENV POSTGRES_URL=jdbc:postgresql://postgres:5432/petclinic
+ENV POSTGRES_URL=jdbc:postgresql://172.17.87.120:5432/petclinic
 ENV POSTGRES_USER=petclinic
 ENV POSTGRES_PASS=petclinic
 

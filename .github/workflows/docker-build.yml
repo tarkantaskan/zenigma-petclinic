@@ -47,8 +47,7 @@ jobs:
           push: true
           tags: |
             tarkantaskan/zenigma:latest
-            tarkantaskan/zenigma:${{ github.run_number }}
-      
+                  
       - name: Clean up
         if: always()
         run: |
